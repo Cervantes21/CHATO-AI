@@ -12,7 +12,7 @@ headers = {
     "Authorization": f"Bearer {os.getenv('API_KEY')}"
 }
 
-def generate_text(prompt, temperature=0.5, max_tokens=100):
+def generate_text(prompt, temperature=0.1, max_tokens=218):
     data = {
         "prompt": prompt,
         "temperature": temperature,
@@ -23,11 +23,11 @@ def generate_text(prompt, temperature=0.5, max_tokens=100):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Genera texto utilizando la API de OpenAI')
-    parser.add_argument('--temp', type=float, default=0.5, help='La temperatura para la generación de texto')
-    parser.add_argument('--max-tokens', type=int, default=100, help='La cantidad máxima de tokens para la generación de texto')
+    parser.add_argument('--temperature', type=float, default=0.5, help='La temperatura para la generación de texto')
+    parser.add_argument('--max-tokens', type=int, default=218, help='La cantidad máxima de tokens para la generación de texto')
     args = parser.parse_args()
 
-    temperature = args.temp
+    temperature = args.temperature
     max_tokens = args.max_tokens
 
     prompt = input('Ingrese la frase de inicio para la generación de texto: ').strip()
@@ -36,5 +36,5 @@ if __name__ == '__main__':
         print('La frase de inicio no puede estar vacía')
     else:
         response = generate_text(prompt, temperature=temperature, max_tokens=max_tokens)
-        print("Chato: " + response)
+        print("ChatGPT: " + response)
 
