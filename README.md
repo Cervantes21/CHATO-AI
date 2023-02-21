@@ -4,7 +4,32 @@ Un asistente virtual vinculado con tu cuenta de OPENAI
 Creación del ambiente virtual de Python
 Abre una terminal en la carpeta donde se encuentra el archivo requirements.txt.
 
-Ejecuta el siguiente comando para crear un nuevo ambiente virtual de Python:
+# **Información importante:**
+
+Para continuar debes de tener tu API-KEY proporcionado por OPENAI
+sí no cuentas con uno puedes generarlo [En este link](https://platform.openai.com/account/api-keys)
+
+Una vez que tengas ese código deberas copiarlo y guardarlo.
+
+Cuando tengas ese código. Abre un editor de texto y crea un archivo ".env" así, sin nombre, solo la pura extensión.
+
+en el cuál crearás una variable que se llame **API-KEY**
+ejemplo:
+
+Con editor de texto vim, o nano:
+
+```
+vim .env
+```
+
+```
+API_KEY=sk-y-pones-tu-clave-que-te-dieron-sin-espacios
+```
+
+Guardas el archivo y ejecutas los siguientes pasos:
+
+
+# Ejecuta el siguiente comando para crear un nuevo ambiente virtual de Python:
 
 ```
 python -m venv env
@@ -69,3 +94,4 @@ python chato.py [--temperature TEMPERATURE] [--max-tokens MAX_TOKENS]
 El script te pedirá que ingreses la frase de inicio para la generación de texto. El resultado de la generación de texto será impreso en la consola.
 
 ¡Listo! Con estos pasos ya tendrás instaladas las dependencias, podrás ejecutar el script.
+
