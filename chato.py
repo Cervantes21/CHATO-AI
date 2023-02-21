@@ -30,7 +30,7 @@ if __name__ == '__main__':
     temperature = args.temperature
     max_tokens = args.max_tokens
 
-    prompt = input('Ingrese la frase de inicio para la generación de texto: ').strip()
+    prompt = input('¿Cómo puedo ayudarte?: ').strip()
 
     if not prompt:
         print('La frase de inicio no puede estar vacía')
