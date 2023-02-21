@@ -1,9 +1,5 @@
 #Other versions
 /other_version
-# Sources Env
-/venv
-/env
-/ven
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
